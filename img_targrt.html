@@ -1,0 +1,390 @@
+<!-- 긴 설명이 2줄 일 때 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img</title>
+
+    <style>
+
+        /* 이 화면 전체의 글자 색깔과 바탕화면 */
+        body {
+            background-color: #F2EDD7;
+            color: #755139;
+        }
+
+        /* 이 화면 전체의 수평선 */
+        hr {
+            background-color: #755139;
+            height: 3px;
+        }
+
+        /* 가로 정렬 */
+        .ex, #p2 {
+            float: left;
+        }
+
+        /* 이미지 가운데 정렬 */
+        .ex_img {
+            text-align: center;
+            float: left;
+        }
+        
+        /* 예시 코딩창과 출력 화면 사이의 여백 */
+        .break {
+            float: left;
+            width: 50px;
+        }
+
+
+        /* 제목 글씨 크기 바꾸기 */
+        #p1 {
+            font-size: 50px;
+        }
+
+        /* 예시 문구 왼쪽 공백 */
+        #p2 {
+            float: left;
+            width: 250px;
+        }
+
+         /* 선 가로 크기 지정 */
+        .hr1 {
+            width: 700px;
+        }
+
+        /* 이미지 크기 */ 
+        .img1 {
+            height: 265px;
+            width: 610px;
+        }
+
+        /* 예시 문구 아래 공백 */
+        #p5 {
+            clear: left;
+        }
+
+        /* 전체 p태그에 20px 넣기 */
+        p {
+            font-size: 20px;
+        }
+
+        /* 긴 글 아래 공백 */
+        #p6 {
+            height: 50px;
+        }
+
+        /* 부가 설명의 제목 부분 */
+        .font {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        /* 수평선 사이 여백 */
+        #gap {
+            height: 30px;
+        }
+
+        /* 맨 위에 있는 target에 대한 설명 부분 */
+        #p7 {
+            text-align: center;
+            font-size: 25px;
+        }
+
+        
+        /* 화면 옆 고정된 메뉴바 */
+        nav {
+            width: 200px;
+            background-color: #eee;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            height: 90%;
+            bottom: 7%;
+        }
+
+        /* 화면 옆 고정된 메뉴바 - 제목 */
+        #h1 {
+            font-size: 25px;
+            padding: 20px;
+            height: 15px;
+        }
+
+        /* 화면 옆 고정된 메뉴바 - 목록 */
+        .menu li a{
+            height: 30px;
+            line-height: 10px;
+            display: block;
+            padding: 0 20px;
+            font-size: 15px;
+            color: #755139;
+        }
+        
+        /* 화면 옆 고정된 메뉴바 - 마우스 커서가 목록 위로 이동하였을 때 */
+        .menu li a:hover {
+            color: blue;
+        }
+
+
+        /* 고정 버튼 꾸미기 */
+        .footer1 {
+        position:fixed; 
+        left:-2%; 
+        bottom:80.1%; 
+        padding: 2em;
+        }
+
+        .footer2 {
+        position:fixed; 
+        left:-2%; 
+        bottom:87.1%; 
+        padding: 2em;
+        }
+
+        button, button::after {
+            -webkit-transition: all 0.3s;
+	        -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+	        transition: all 0.3s;   
+        }
+
+        .btn-4 {
+            width: 200px;
+            height: 50px;
+        }
+
+        button {
+            background: none;
+            border: 3px solid #755139;
+            border-radius: 5px;
+            color: #eee;
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            margin: 1em auto;
+            position: relative;
+        }
+
+        button::before, button::after {
+            background: #eee;
+            content: '';
+            position: absolute;
+            z-index: -1;
+        }
+
+        button:hover {
+            color: #755139;
+        }
+
+        /* BUTTON 4 */
+        .btn-4::before {
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .btn-4::after {
+            background: #755139;
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+
+        .btn-4:hover:after {
+            height: 0;
+            left: 50%;
+            top: 50%;
+             width: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- 메뉴바-->
+    <nav>
+        <br> <br> <br> <br> <br> <br> <br> 
+        <hr>
+        <h1 id="h1"> target </h1>
+        <ul class="menu">
+            <li> <a href="#_blank">_width</a> </li>
+            <li> <a href="#_self">_height</a> </li>
+            <li> <a href="#_parent">_alt</a> </li>
+            <li> <a href="#_top">_title</a> </li>
+        </ul>
+        <hr>
+    </nav>
+
+    <div style="text-align:center;">
+        <p id="p1">html</p> <!-- 제목 -->
+    </div>
+
+    <hr>
+
+    <p id="p7"> &lt;img scr="" alt=""&gt;
+    <br>
+    scr="" : "사진파일의 이름을 쓰는곳 입니다."</p>
+    
+    <hr id="_blank">
+
+    <!-- 왼쪽 상단에 있는 버튼 -->
+    <footer class="footer2">
+    <div class="wrap">
+    <button class="btn-4">홈페이지 이동하기</button> <!-- 메인 화면으로 이동 -->
+    </div>
+    </footer>  
+
+    <!-- 왼쪽 상단에 있는 버튼 -->
+    <footer class="footer1">
+    <div class="wrap">
+    <button class="btn-4" onclick="location.href='img.html'">전화면으로 이동</button> <!-- a태그 설명하는 페이지 이동 -->
+    </div>
+    </footer>     
+    
+     <!-- 수평선 사이 공백 -->
+     <p id="gap"> </p>
+
+    <hr>
+
+    <!-- _blank -->
+
+    <!-- 부가 설명의 핵심(제목) -->
+    <p class="font">width=""</p> 
+
+    <p id="p2">  </p> <!-- 가로 공백 -->
+    
+    <div class="ex"> <hr class="hr1"> <p> . <br> . <br> . <br> &lt;img src="ex.png" alt="예시 이미지" width="350"&gt; <br> . <br> . <br> . <br> <hr class="hr1">  </p>   </div>  
+    <!-- 예시 코드 -->
+
+    <p class="break"> </p> <!-- 공백 -->
+
+    <div class="ex_img"> <hr class="hr1"> <img src="tag2_img/a_tag.png" alt="예시 출력화면" class="img1"> <hr class="hr1"> </div>
+    <!-- 출력 이미지 예 -->
+
+    <p id="p5"></p>  <!-- 공백 -->
+
+    <p style="text-align: center;"> 
+
+        <br>
+        이미지의 너비를 지정할 수 있습니다.
+
+    </p>
+
+    <img src="" alt="" width="">
+
+    <!-- 문구 아래 공백 -->
+    <p id="p6"></p>
+
+    <hr id="_self">
+
+    <!-- 수평선 사이 공백 -->
+    <p id="gap"> </p>
+    
+    <hr>
+
+
+    <!-- _self -->
+    
+    <!-- 부가 설명의 핵심(제목) -->
+    <p class="font">height=""</p>
+
+    <p id="p2">  </p> <!-- 가로 공백 -->
+    
+    <div class="ex"> <hr class="hr1">  <p> . <br> . <br> . <br> &lt;img src="ex.png" alt="" height="280"&gt; <br> . <br> . <br> . <br> <hr class="hr1">  </p>   </div>  
+    <!-- 예시 코드 -->
+
+    <p class="break"> </p> <!-- 공백 -->
+
+    <div class="ex_img"> <hr class="hr1"> <img src="tag2_img/a_tag.png" alt="예시 출력화면" class="img1"> <hr class="hr1"> </div>
+    <!-- 출력 이미지 예 -->
+
+    <p id="p5"></p>  <!-- 공백 -->
+
+    <p style="text-align: center;"> 
+
+        <br>
+        이미지의 높이를 지정할 수 있습니다
+
+    </p>
+
+    <!-- 문구 아래 공백 -->
+    <p id="p6"></p>
+
+    <hr id="_parent">
+
+     <!-- 수평선 사이 공백 -->
+     <p id="gap"> </p>
+
+    <hr>
+
+     <!-- _parent -->
+
+     <!-- 부가 설명의 핵심(제목) -->
+     <p class="font">alt=""</p>
+
+     <p id="p2">  </p> <!-- 가로 공백 -->
+     
+     <div class="ex"> <hr class="hr1"> <p> . <br> . <br> . <br>  &lt;img src="ex.png" alt="예시 이미지 대체텍스트"&gt;  <br> . <br> . <br> . <br> <hr class="hr1">  </p>   </div>  
+     <!-- 예시 코드 -->
+ 
+     <p class="break"> </p> <!-- 공백 -->
+ 
+     <div class="ex_img"> <hr class="hr1"> <img src="tag2_img/a_tag.png" alt="예시 출력화면" class="img1"> <hr class="hr1"> </div>
+     <!-- 출력 이미지 예 -->
+ 
+     <p id="p5"></p>  <!-- 공백 -->
+ 
+     <p style="text-align: center;"> 
+ 
+         <br>
+         사진이 깨져 안 보이는 경우 대체텍스트를 사용해 이미지 대신 텍스트로 쓰는 속성
+     </p>
+ 
+     <!-- 문구 아래 공백 -->
+     <p id="p6"></p>
+ 
+    <hr  id="_top">
+
+     <!-- 수평선 사이 공백 -->
+     <p id="gap"> </p>
+
+    <hr>
+
+     <!-- _top -->
+
+     <!-- 부가 설명의 핵심(제목) -->
+     <p class="font">title=""</p>
+
+     <p id="p2">  </p> <!-- 가로 공백 -->
+     
+     <div class="ex"> <hr class="hr1"> <p> . <br> . <br> . <br>  &lt;img src="ex.png" alt="예시 이미지 대체텍스트" title="예시 이미지"&gt;  <br> . <br> . <br> . <br> <hr class="hr1">  </p>   </div>  
+     <!-- 예시 코드 -->
+ 
+     <p class="break"> </p> <!-- 공백 -->
+ 
+     <div class="ex_img"> <hr class="hr1"> <img src="tag2_img/a_tag.png" alt="예시 출력화면" class="img1"> <hr class="hr1"> </div>
+     <!-- 출력 이미지 예 -->
+ 
+     <p id="p5"></p>  <!-- 공백 -->
+ 
+     <p style="text-align: center;"> 
+ 
+         <br>
+        툴팁 : 마우스 커서를 이미지에 올렸을때 나올 텍스트를 지정하는 속성
+     </p>
+ 
+     <!-- 문구 아래 공백 -->
+     <p id="p6"></p>
+ 
+     <hr>
+
+    
+
+
+</body>
+</html>
